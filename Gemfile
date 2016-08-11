@@ -48,3 +48,4 @@ group :development do
 end
 
 gem 'devise', '~> 4.2'
+gem 'awesome_print', '~> 1.7'
