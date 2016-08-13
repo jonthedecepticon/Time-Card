@@ -49,3 +49,4 @@ end
 
 gem 'devise', '~> 4.2'
 gem 'awesome_print', '~> 1.7'
+gem 'bootstrap-sass', '~> 3.3.6'
