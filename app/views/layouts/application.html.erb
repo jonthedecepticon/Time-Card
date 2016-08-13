@@ -8,7 +8,18 @@
 </head>
 <body>
 
-<%= yield %>
+<div class="container-fluid padding-zero">
+  <div class="row">
+    <div class="col-md-12">
+      <%= render 'shared/nav' %>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <%= yield %>
+    </div>
+  </div>
+</div>
 
 </body>
 </html>
