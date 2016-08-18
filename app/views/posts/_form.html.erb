@@ -1,7 +1,20 @@
-<%= form_for @post do |f| %>
-  <%= f.date_field :date %>
-  <%= f.text_area :rational %>
+<div class="col-md-offset-3 col-md-6">
+  <% if @post.errors.any? %>
+    <% @post.errors.full_messages.each do |msg| %>
+      <%= js add_gritter(msg, title: "TimeCard Notification", sticky: false, time: 7000) %>
+    <% end %>
+  <% end %>
 
-  <%= f.submit 'Save' %>
+  <%= form_for @post do |f| %>
 
-<% end %>
+  <div class="form-group">
+    <%= f.label :date, class: 'control-label'%>
+    <%= f.date_field :date, class: "form-control" %>
+    <%= f.label :rational, class: 'control-label' %>
+    <%= f.text_area :rational, class: "form-control" %>
+  </div>
+
+  <%= f.submit 'Save', class: 'btn btn-primary' %>
+
+  <% end %>
+</div>
